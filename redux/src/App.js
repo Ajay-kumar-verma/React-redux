@@ -2,16 +2,18 @@ import {useState } from 'react'
 import {getData} from './redux/action/index'
 import { useDispatch, useSelector } from 'react-redux'
 
-
-
-
 function App() {
 
+  const tkn=useSelector(state=>{
+    // state return object of containing all values   
+    // with thier function name        
 
-  const tkn=useSelector(state=>state.FetchData);
+    console.log("useselector part",state,state.FetchData);
+    return state.FetchData+"ajay";
 
-   const dispatch=useDispatch();
-    
+  });
+ 
+  const dispatch=useDispatch();
   const [data,setData]=useState({});
  
   const info=(e)=>{

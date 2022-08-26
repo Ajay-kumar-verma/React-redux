@@ -3,6 +3,17 @@ import { useState } from 'react';
 
 export const FetchData = (state="",action) => {
    
+    // state return prevState data
+    // current state data 
+
+    // action has two field 
+    // type : WhAT TO DO  // name 
+    // payload  : how much to do  // data //amount 
+
+
+
+    
+    console.log(state,action);
 
 //    const [tkn,setTkn]=useState(" a");   1
 
