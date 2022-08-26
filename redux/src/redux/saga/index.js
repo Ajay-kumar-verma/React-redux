@@ -6,6 +6,7 @@ function* ageUpAsync() {
   yield put({ type: "fetch_data", value: 1 });
 }
 
+
  export function* watchAgeUp() {
   yield takeLatest("fetch_data", ageUpAsync);
 }
