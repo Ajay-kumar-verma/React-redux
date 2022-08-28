@@ -30,9 +30,8 @@ export const FetchData = (state="",action) => {
 
 
    switch(action.type){
-   case "fetch_data":
-    return id+pswd ;
-
+   case "token":
+    return JSON.stringify(state);
    default :return state; 
   }
 
