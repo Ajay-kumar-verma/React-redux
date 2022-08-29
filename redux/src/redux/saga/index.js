@@ -1,30 +1,22 @@
-import axios from 'axios';
-import { takeEvery, put } from 'redux-saga/effects'
+import { takeEvery, put ,call} from 'redux-saga/effects'
+import {api}  from './api.js';
 export default function* helloSaga() {
   // console.log('Hi i am saga !')
   // console.log(" from saga ", data)
    yield takeEvery("fetch_data", getData);
 } 
 
-function* getData(data) {
-let {userId, pswd}=data.payload;
-let email= userId ; let password=pswd;
+function* getData(data){
+ 
+// console.log("get data called  ",data);
 
-const url="https://reqres.in/api/login";
+let tkn=  yield call(api,data);
 
-  axios.post(url,{
-      "email": "eve.holt@reqres.in",
-      "password": "cityslicka"
-  }).then(res=>{
-   console.log("FETCHED DATA ...",res);
-   return  res;
- })
+console.log("get token ",tkn);
 
-  // tkn = yield tkn.json();
+yield put({type: "token", tkn});
 
-  //  console.info("token is fetched :", tkn);
+return ;
 
-  let tkn="ajay kumar verma ";
-   yield put({type: "token", tkn });
 }
 

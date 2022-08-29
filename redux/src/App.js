@@ -9,7 +9,7 @@ function App() {
     // with thier function name        
 
     console.log("useselector part",state,state.FetchData);
-    return state.FetchData+"ajay";
+    return state.FetchData;
 
   });
  
@@ -39,8 +39,8 @@ let obj=getData(data);
   return (
     <>
   
-   <input type="text"  name='userId' onChange={e=>{info(e)}} />
-   <input type="text"  name='pswd'   onChange={e=>{info(e)}}  />
+   <input type="text"  name='userId' defaultValue={"eve.holt@reqres.in"} onChange={e=>{info(e)}} />
+   <input type="text"  name='pswd'   defaultValue={"cityslicka"}  onChange={e=>{info(e)}}  />
    <input type="submit" value="login" onClick={()=>{getToken()}} />
    <p>
   Token is: {tkn}

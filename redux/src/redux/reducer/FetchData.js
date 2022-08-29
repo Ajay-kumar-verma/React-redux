@@ -13,25 +13,12 @@ export const FetchData = (state="",action) => {
 
 
     
-    console.log(state,action);
-
-//    const [tkn,setTkn]=useState(" a");   1
-
-        let id=action?.payload?.userId;
-        let pswd=action?.payload?.pswd;
-        
-            // axios.post('https://reqres.in/api/login',{
-            //     "email": "eve.holt@reqres.in",
-            //     "password": "cityslicka"
-            // }).then(res=>setTkn(res));
-
-    //    console.log(tkn)
-
+    console.log("Reducer function   \nState", state,"\nAction",action);
 
 
    switch(action.type){
    case "token":
-    return JSON.stringify(state);
+    return JSON.stringify(action.tkn);
    default :return state; 
   }
 

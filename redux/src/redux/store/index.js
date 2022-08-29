@@ -11,11 +11,14 @@ import reducers from "../reducer";
 
 const sagaMiddleware = createSagaMiddleware();
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
+
 const store = createStore(
     reducers
-  , applyMiddleware(sagaMiddleware)
+    , composeEnhancers(applyMiddleware(sagaMiddleware))
     
-   //, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  //  , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
    );
    sagaMiddleware.run(saga);
 
