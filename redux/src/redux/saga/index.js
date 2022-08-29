@@ -12,7 +12,7 @@ let email= userId ; let password=pswd;
 
 const url="https://reqres.in/api/login";
 
-let tkn=axios.post(url,{
+  axios.post(url,{
       "email": "eve.holt@reqres.in",
       "password": "cityslicka"
   }).then(res=>{
@@ -20,22 +20,11 @@ let tkn=axios.post(url,{
    return  res;
  })
 
-  tkn = yield tkn.json();
+  // tkn = yield tkn.json();
 
-   console.info("token is fetched :", tkn);
-   yield put({type: "token", tkn});
+  //  console.info("token is fetched :", tkn);
+
+  let tkn="ajay kumar verma ";
+   yield put({type: "token", tkn });
 }
 
-
-// function* searchProducts(data) {
-//    let result = yield fetch(`http://localhost:3500/products?q=${data.query}`);
-//    result = yield result.json();
-//    console.warn("action is called", result)
-//    yield put({type: SET_PRODUCT_LIST, data:result})
-// }
-
-
-// function* productSaga() {
-//    yield takeEvery(PRODUCT_LIST, getProducts)
-//    yield takeEvery(SEARCH_PRODUCT, searchProducts)
-// }
