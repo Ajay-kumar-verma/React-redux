@@ -9,7 +9,7 @@ const  CakeContainer = () => {
     return (
     <>
   <h2>Number of Cake:{numOfcakes}  </h2>
-  {/* <button onClick={()=>{}} >Buy cake</button> */}
+  <button onClick={()=>{buyCake()}} >Buy cake</button>
 
     </>
 
