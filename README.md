@@ -1,5 +1,5 @@
 # React-redux 
-
+> https://javascript.plainenglish.io/redux-logger-your-next-debugging-tool-the-art-of-logging-e1999cbbd146
 
 **Store**
 - A Store hold the data of your application .
@@ -46,7 +46,8 @@
 - javascript app = >dispatch ,Action => reducer => store = > javascript app
   
 
-
+**Middle Ware**
+- It allow to add custom functionality 
 
 
 

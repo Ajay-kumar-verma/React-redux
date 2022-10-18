@@ -1,13 +1,17 @@
-const redux =require('redux');
-
-const {createStore,combineReducers} =redux;
-
+const {createStore,combineReducers,applyMiddleware}  =require('redux');
+const reduxLogger=require('redux-logger');
+const {createLogger}=reduxLogger
 
 console.log("This is redux ");
 
 const BUY_CAKE="BUY_CAKE";
 const BUY_ICECREAM="BUY_ICECREAM";
 const BUY_BALL="BUY_BALL";
+
+const logger=createLogger({
+    duration : false,
+    fun:()=>console.log("sddf")
+});
 
 function buyCake(){
       return {
@@ -127,7 +131,7 @@ const rootReducer=combineReducers({
 
 
 // const {getState ,dispatch,subscribe} =createStore(reducer)
-const {getState ,dispatch,subscribe} =createStore(rootReducer)
+const {getState ,dispatch,subscribe} =createStore(rootReducer,applyMiddleware(logger))
 
 const unsubcribe=  subscribe(() => console.log("updated state :",getState()));
 console.log("Initial State :",getState()); 
