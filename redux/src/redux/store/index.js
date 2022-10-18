@@ -1,6 +1,6 @@
- import {configureStore}   from 'redux-toolkit' 
+ import {createStore}   from 'react-redux' 
  import  reducer from '../Cake/CakeReducer'
 
- const store =configureStore(reducer);
+ const store =createStore(reducer);
 
 export  {store};
