@@ -29,6 +29,21 @@
 
 
 
+
+> **Store** <br/>
+ store the data , allow to access the data via getState() ,allow to update the data via dispatch
+
+
+>  **Reducer** <br/>
+ Specify how the app's state changes in responce to action sent to the store  
+
+
+>  **subscribe** <br/>
+ Register listener via subcribe(listener)  
+
+
+
+
 **Flow**
 - javascript app = >dispatch ,Action => reducer => store = > javascript app
   
