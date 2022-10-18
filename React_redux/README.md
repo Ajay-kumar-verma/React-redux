@@ -42,11 +42,11 @@
  Register listener via subcribe(listener)  
 
 
-
-
 **Flow**
 - javascript app = >dispatch ,Action => reducer => store = > javascript app
   
+
+
 
 
 
