@@ -1,6 +1,8 @@
 # React-redux 
 > https://javascript.plainenglish.io/redux-logger-your-next-debugging-tool-the-art-of-logging-e1999cbbd146
 
+> https://www.freecodecamp.org/news/what-is-redux-store-actions-reducers-explained/
+
 **Store**
 - A Store hold the data of your application .
 
